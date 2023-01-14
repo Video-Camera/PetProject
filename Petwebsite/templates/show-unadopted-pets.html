@@ -1,0 +1,10 @@
+{% block content %}
+<h1>List of not adopted pets</h1>
+{% for pet in content %}
+	<h5>Pet's name: {{pet[1]}}</h5>
+	<h5>Pet's species: {{pet[2]}}</h5>
+	<a href="/pet/{{pet[0]}}">View profile</a>
+	<br>
+
+{% endfor %}
+{% endblock %}

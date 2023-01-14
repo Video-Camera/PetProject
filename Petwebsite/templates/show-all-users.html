@@ -1,0 +1,7 @@
+{% block content %}
+{% for user in content %}
+	<h2>{{user[1]}}</h2>
+	<a href="/user/{{user[0]}}">View Profile</a>
+	<br>
+{% endfor %}
+{% endblock %}

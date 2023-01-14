@@ -1,0 +1,16 @@
+{% block content %}
+	<h1>Pet Details</h1>
+{% for pet in content %}
+
+	<p>petId: {{pet[0]}}</p>
+	<p>Pet's name: {{pet[1]}}</p>
+	<p>Type: {{pet[2]}}</p>
+	{% if pet[3] == 0 %}
+		<p>Un-adopted</p>
+	{% else %}
+		<p>Adopted</p>
+	{% endif %}
+	<a href="/pet/edit/{{pet[0]}}">Update Pet</a>
+
+{% endfor %}
+{% endblock %}

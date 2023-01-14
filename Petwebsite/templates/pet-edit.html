@@ -1,0 +1,18 @@
+{% block content %}
+{{content}}
+<form action="/pet/edit/{{content[0]}}" method="post">
+	<label>Pet Name:</label>
+	<input name="editName" value="{{content[1]}}"><br>
+	<label>Pet Species:</label>
+	<input name="editSpecies" value="{{content[2]}}"><br><br>
+	<label>Select owner who doesn't have a pet:</label>
+	<select name="editOwner">
+		{% for user in list_of_users %}
+			{% if user[3] == 0 %}
+			<option value="{{user[0]}}">{{user[1]}}</option>
+			{% endif %}
+		{% endfor %}
+	</select>
+	<button type="submit">Submit</button>
+</form>
+{% endblock %}

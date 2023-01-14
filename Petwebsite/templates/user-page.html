@@ -1,0 +1,19 @@
+{% block content %}
+<html>
+<head>
+<style>
+h1 {text-align: center;}
+p {text-align: center;}
+a {text-align: center;}
+</style>
+</head>
+<body>
+
+<h1>{{content[1]}} {{content[2]}}</h1>
+<p>{{content[1]}} owns: {{pet[1]}}</p>
+{% if content[3] != 0 %}
+<a href="/pet/{{content[3]}}">Link to pet profile</a>
+{% endif %}
+</body>
+</html>
+{% endblock %}
